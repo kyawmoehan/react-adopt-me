@@ -4,32 +4,14 @@ import Pet from "./Pet";
 
 // app is component & stamp
 const App = () => {
-  return React.createElement(
-    // tag
-    "div",
-    // attribuet
-    { id: "helllo" },
-    // child
-    [
-      React.createElement("h1", {}, "Adopt Me!"),
-      React.createElement("h1", {}, "Adopt Me!"),
-      React.createElement(Pet, {
-        name: "Blacky",
-        animal: "dog",
-        breed: "Myamar",
-      }),
-      React.createElement(Pet, {
-        name: "Kitty",
-        animal: "cat",
-        breed: "Ruusian",
-      }),
-      React.createElement(Pet, {
-        name: "Ma Kha",
-        animal: "bird",
-        breed: "Ta La Kha",
-      }),
-    ]
+  return (
+    <div>
+      <h1>Adopt Me</h1>
+      <Pet name="Blacky" animal="dog" breed="Myanmar" />
+      <Pet name="Kitty" animal="cat" breed="Russion" />
+      <Pet name="Ma Kha" animal="bird" breed="Ta La Kha" />
+    </div>
   );
 };
 
-render(React.createElement(App), document.getElementById("root"));
+render(<App />, document.getElementById("root"));
