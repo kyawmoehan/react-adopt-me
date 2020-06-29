@@ -13,6 +13,7 @@ body {
 .search-params {
   width: 1100px;
   margin: 0 auto;
+  margin-top: 1rem;
 }
 
 .search-params form {
@@ -40,6 +41,7 @@ body {
   padding: 15px;
   border-radius: 9px;
   margin-bottom: 25px;
+  margin-top: 1.5rem;
 }
 
 .pet {
@@ -47,8 +49,13 @@ body {
   height: 130px;
   display: block;
   overflow: hidden;
-  margin: 25px 0;
+  padding-top: 20px;
+  margin: 20px 0;
   border-bottom: #bf9b2f 1px solid;
+}
+
+.pet:hover {
+  background-color: #f5de6d;
 }
 
 .pet img {
@@ -86,12 +93,16 @@ body {
 
 header > a,
 #root > div > h1 {
-  display: inline-block;
+  /* display: inline-block; */
   background-image: url(http://static.frontendmasters.com/resources/2019-05-02-complete-intro-react-v5/image-logo.png);
-  width: 279px;
+  background-repeat: no-repeat;
+  /* width: 279px; */
   height: 76px;
   overflow: hidden;
   text-indent: -9999px;
+  width: 1100px;
+  margin: 0 auto;
+  margin-top: 1.5rem;
 }
 
 .pet h2 {
@@ -118,6 +129,15 @@ header {
   width: 1100px;
   margin: 0 auto;
   padding: 20px 0px 0px 0px;
+}
+
+.loading {
+  width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #d9c148;
+  font-size: 2rem;
 }
 
 .details p {
@@ -176,10 +196,11 @@ header {
 
 .search-params input,
 .search-params select {
+  display: block;
   margin-bottom: 30px;
   font-size: 18px;
   height: 30px;
-  width: 325px;
+  width: 100%;
 }
 
 .search-params button,
@@ -248,12 +269,14 @@ header {
     padding: 20px 0px 0px 0px;
   }
 
-  .search-params {
+  .search-params,
+  #root > div > h1 {
     width: 95%;
   }
 
   .search-params form {
     margin-bottom: 20px;
+    width: 360px;
   }
 
   .search {
@@ -270,6 +293,7 @@ header {
     padding: 15px;
     border-radius: 9px;
     margin-bottom: 25px;
+    margin-top: 1rem;
   }
 
   .info {
@@ -296,6 +320,11 @@ header {
     width: 95%;
   }
 
+  .search-params form {
+    width: 100%;
+    margin-right: 0;
+  }
+
   .search {
     width: 100%;
   }
@@ -309,6 +338,10 @@ header {
   .info {
     width: 100%;
     text-align: center;
+  }
+  .search-params form {
+    width: 100%;
+    margin-right: 0;
   }
 
   .image-container {
