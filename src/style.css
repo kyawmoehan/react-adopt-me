@@ -295,7 +295,10 @@ header {
     margin-bottom: 25px;
     margin-top: 1rem;
   }
-
+  .loading {
+    width: 95%;
+    margin: 0 auto;
+  }
   .info {
     width: 65%;
   }
