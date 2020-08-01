@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import { render } from "react-dom";
 import { Router } from "@reach/router";
 import NavBar from "./NavBar";
 import SearchParams from "./SearchParams";
-import Details from "./Details";
 import ThemeContext from "./ThemeContext";
 import NotFoundPage from "./NotFoundPage";
+
+const Details = lazy(() => import("./Details"));
 
 // app is component & stamp
 const App = () => {
@@ -15,11 +16,13 @@ const App = () => {
       <ThemeContext.Provider value={themeHook}>
         <div>
           <NavBar />
-          <Router>
-            <SearchParams path="/" />
-            <Details path="/details/:id" />
-            <NotFoundPage path="*" />
-          </Router>
+          <Suspense fallback={<h1>Loading Route...</h1>}>
+            <Router>
+              <SearchParams path="/" />
+              <Details path="/details/:id" />
+              <NotFoundPage path="*" />
+            </Router>
+          </Suspense>
         </div>
       </ThemeContext.Provider>
     </React.StrictMode>
