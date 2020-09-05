@@ -8,7 +8,8 @@
     "build": "parcel build src/index.html",
     "start": "parcel serve src/index.html",
     "format": "prettier \"src/**/*.{js,html}\" --write",
-    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
   "devDependencies": {
     "@babel/core": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
+    "@testing-library/react": "^10.4.9",
     "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.2",
     "eslint": "^7.2.0",
@@ -24,8 +26,10 @@
     "eslint-plugin-jsx-a11y": "^6.3.0",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.4",
+    "jest": "^26.4.2",
     "parcel-bundler": "^1.12.4",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "react-testing-library": "^8.0.1"
   },
   "dependencies": {
     "@emotion/babel-preset-css-prop": "^10.0.27",
@@ -33,7 +37,9 @@
     "@frontendmasters/pet": "^1.0.3",
     "@reach/router": "^1.3.4",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5"
   },
   "browserslist": [
     "last 2 Chrome versions"

@@ -7,6 +7,7 @@ const useDropdown = (label, defaultState, options) => {
     <div>
       <label htmlFor="{id}">{label}</label>
       <select
+        data-testid={id}
         id={id}
         value={state}
         onChange={(e) => setState(e.target.value)}
